@@ -42,12 +42,7 @@ function esDiezOCinco(numero) {
     // Devuelve "true" si "numero" es 10 o 5
     // De lo contrario, devuelve "false"
     // Tu código:
-    if (numero === 10 || 5){
-      return (true)
-    }
-    
-  else return (false);
-  
+    return numero === 10 || numero === 5;
 }
 
 function estaEnRango(numero) {
@@ -69,12 +64,7 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  if (numero === 5){
-    return (true)
-  }
-
-  else if (numero !== Math.floor(0,5))
-    return (false)
+  return numero % 1 === 0;
   }
 
 function fizzBuzz(numero) {
@@ -105,15 +95,15 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  if (numero > 2){
-    return true;
+  if(numero < 2){
+    return false;
   }
-  for(var x = 2; x > numero; x++){
-    if (numero % x === 0){
-      return true;
-     }
-    
-return false;
+
+  for(var i = 2; i < numero; i++){
+    if(numero % i === 0){
+      return false;
+    }
+    return true;
   } 
 }
 
